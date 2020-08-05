@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>WISEY</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <ul class="nav justify-content-end navbar-dark bg-dark">
+    <li class="nav-item">
+      <a class="nav-link active" href="/main">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/comments">Comments</a>
+    </li>
+  </ul>
+
+  <div class="alert alert-success">
+    <h1 class="cent display-1">Welcome to wisey</h1>
+  </div>
+  <div class="container">
+    <% postList.forEach(function(post){ %>
+    <div class="">
+      <h3 class="display-3"><%= post.title %></h3>
+      <p><%= post.body %></p>
+      <hr>
+    </div>
+    <% }); %>
+  </div>
+</body>
+
+</html>

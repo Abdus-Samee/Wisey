@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WISEY</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <ul class="nav justify-content-end navbar-dark bg-dark">
+      <li class="nav-item">
+        <a class="nav-link active" href="/main">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/comments">Comments</a>
+      </li>
+    </ul>
+
+    <div class="alert alert-success">
+      <h1 class="cent display-1">Wisey Comments</h1>
+    </div>
+
+    <div class="cent">
+      <form class="form-signin" action="/comments" method="post">
+        <div class="form-group">
+          <label>Name</label>
+          <input class="form-control" type="text" name="commentAuthor">
+          <label>Comment</label>
+          <input class="form-control" type="text" name="commentBody">
+        </div>
+        <button class="btn btn-dark" type="submit" name="button">Comment!</button>
+      </form>
+    </div><br>
+
+    <div class="container">
+      <% commentList.forEach(function(comment){ %>
+      <div class="">
+        <h3><%= comment.comment %></h3>
+        <small>by <%= comment.author %></small>
+        <hr />
+      </div>
+      <% }); %>
+    </div>
+  </body>
+</html>
